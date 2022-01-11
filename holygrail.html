@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* 수평으로 나란히 보여주기 */
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            border-bottom: 1px solid gray;
+            padding-left: 20px;
+        }
+        footer {
+            border-top: 1px solid gray;
+        }
+        .content {
+            display: flex;
+        }
+        .content nav {
+            border-right: 1px solid gray;
+        }
+        .content aside {
+            border-left: 1px solid gray;
+        }
+        /* 화면의 움직임에 따라 main만 움직이게 하기 */
+        nav, aside {
+            flex-basis: 150px;
+            /* 화면이 줄어들어도 영역이 줄어들지 않음 */
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>생활코딩</h1>
+        </header>
+        <section class="content">
+            <!-- nav, main, add  -->
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis eveniet vero harum neque ipsam, dolorum praesentium tempore voluptates numquam provident cum, alias blanditiis iusto facere rem, tenetur illum odio?
+
+            </main>
+            <aside>
+                <!-- 페이지에서 덜 중요한 광고같은 것 -->
+                AD
+            </aside>
+
+        </section>
+        <footer>
+            <a href="#">홈페이지</a>
+        </footer>
+    </div>
+</body>
+</html>
